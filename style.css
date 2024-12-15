@@ -1,0 +1,80 @@
+/* Genel sıfırlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sayfa arka planı */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Aşkı simgeleyen kırmızı ve turuncu geçişi */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Sayfa içeriği */
+.container {
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Yarı şeffaf arka plan */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Mesaj kısmı */
+.message {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Kalp şekli */
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #ff4c6a;
+    position: relative;
+    display: inline-block;
+    animation: heartBeat 1.5s infinite alternate;
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff4c6a;
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: 50px;
+    top: 0;
+}
+
+.heart::after {
+    left: 0;
+    top: 50px;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
